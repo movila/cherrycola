@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>E-Commerce Food Service | Home</title>
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+	
+		<header id="top-bar" class="clearfix">
+			<div id="logo-container" class="left">
+				<h1><a href="/">E-Food Commerce</a></h1>
+			</div>
+			<div id="signin-container" class="right">
+				<span class="profile-image"><img alt="user profile" src="static/img/food-icon.png" /></span>
+				<span class="profile-name">${client}</span>
+				<a href="Login" alt="login"><span class="btn">Login</span></a>
+					<!--
+					<c:if test="${empty client}">
+						<form action="Login" method="post">
+							<div class="form-line">
+								<button type="submit" class="btn" name="loginbtn" value="login">Login</button>
+							</div>
+						</form>
+					</c:if>
+				
+					<c:if test="${not empty client}">
+						<form action="" method="post">
+							<div class="form-line">
+								<button type="submit" class="btn" name="logout" value="logout">logout</button>
+							</div>
+						</form>
+					</c:if>
+					-->
+			</div>
+		</header>
+		
+		
+		
+		<div id="main-wrapper" class="clearfix">
+			<div id="shopping-cart" class="block">
+				<header class="sidebar-header"><h3>Shopping Cart</h3></header>
+				<form action="" method="post">
+					<div class="cart-item">
+						<div class="form-line clearfix">
+							<div class="cart-item-desc">
+								<h3>${cartItem.name}</h3>
+								<span class="cart-item-number">${cartItem.number}</span>&nbsp;
+								<span class="cart-item-price">${cartItem.price}</span>
+							</div>
+							<input class="cart-item-qty" type="text" name="qty${cartItem.number}" value="${cartItem.quantity}"/>
+							<div class="extended">{cartItem.extended}</div>
+						</div>
+					</div>
+					<!-- /cart-item list -->
+					<button type="submit" class="btn" name="updateCart" value="update">update</button>
+				</form>
+				<div class="sum-total">
+					<ol class="list">
+						<li class="cost">Total: </li>
+						<li class="cost">Shipping: </li>
+						<li class="cost">HST: </li>
+						<li class="cost">Grand: </li>
+					</ol>
+				</div>
+				<div class="checkout">
+					<a href="/checkout">CHECK OUT</a>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

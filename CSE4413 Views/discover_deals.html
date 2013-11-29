@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header id="nav-header" class="clearfix">
+            <div class="left">
+                <div id="site-logo">
+                    <h1><a href="/">LOGO</a></h1>
+                </div>
+                <ul class="menu">
+                    <li class="menu-items"><a class="active" href="/">Discover Deals</a></li>
+                    <li class="menu-items"><a href="/saved-deals">Saved Deals<span class="badge">12</span></a></li>
+                    <li class="menu-items"><a href="/loyalty-programs">Loyalty Programs</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul class="menu">
+                    <li><a href="/sign-up">Sign Up</a>&nbsp;/&nbsp;</li>
+                    <li><a href="/sign-in">Sign In</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="body-container" class="clearfix">
+            <aside id="sidebar">
+                <div id="search-box">
+                    <form action="/search" method="get" id="search">
+                        <input type="text" name="q" class="form-text" placeholder="Search">
+                        <button class="btn-search" type="submit"><span class="glyphicon glyphicon-search">search</span></button>
+                    </form>
+                </div>
+                <div id="filter">
+                    <h2>Filter By</h2>
+                    <div id="filter-wrapper">
+                        <section id="" class="filter-container">
+                            <header class="filter-header">Loyalty Programs</header>
+                            <div class="filter-content active">
+                                <ul class="criteria">
+                                    <li class="filter-option">
+                                        <label for="prog-all">
+                                            SELECT ALL 
+                                            <input id="prog-all" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog-all"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog1">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog1" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog1"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog2">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog2" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog2"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog3">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog3" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog3"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog4">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog4" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog4"></label>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="" class="filter-container">
+                            <header class="filter-header">Sponsor / Retailer</header>
+                            <div class="filter-content">
+                                <ul class="criteria">
+                                    <li class="filter-option">
+                                        <label for="prog-all1">
+                                            SELECT ALL 
+                                            <input id="prog-all1" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog-all1"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog5" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog5"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog6" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog6"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog7" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog7"></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="" class="filter-container">
+                            <header class="filter-header">Deal Category</header>
+                            <div class="filter-content">
+                                <ul class="criteria">
+                                    <li class="filter-option">
+                                        <label for="prog-all2">
+                                            SELECT ALL 
+                                            <input id="prog-all2" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog-all2"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog8" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog8"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog9" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog9"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog0" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog0"></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="" class="filter-container">
+                            <header class="filter-header">Lable</header>
+                            <div class="filter-content active">
+                                <ul class="criteria">
+                                    <li class="filter-option">
+                                        <label for="label-select-all">
+                                            Select All
+                                            <input id="label-select-all" type="checkbox" name="label-select-all">
+                                            <label class="check-mark" for="label-select-all"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>New
+                                        <input id="label-new" type="checkbox" name="label-new">
+                                        <label class="check-mark" for="label-new"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Hot Picks
+                                        <input id="label-hot" type="checkbox" name="label-hot">
+                                        <label class="check-mark" for="label-hot"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Most Saved
+                                        <input id="label-most-saved" type="checkbox" name="label-most-saved">
+                                        <label class="check-mark" for="label-most-saved"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Expiring Soon
+                                        <input id="label-soon" type="checkbox" name="label-soon">
+                                        <label class="check-mark" for="label-soon"></label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </aside>
+            <div id="content">
+                <div id="menu-header" class="clearfix">
+                    <div class="left">
+                        <ul>
+                            <li class="active"><a href="#">All</a></li>
+                            <li><a href="#">For Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <span id="results">1,000+ results</span>
+                    </div>
+                </div>
+                <div id="main-content">
+                    <div class="notification">
+                        <h4>Hi User!</h4>
+                        <p>Here is the ﬁrst time user onboarding message. Lori ipsum Lori ipsum Lori ipsum</p>
+                    </div>
+                    <ul id="deal-list">
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-wrapper">
+                            <div class="list-item">
+                                <div class="item-header">
+                                    <h5 class="deal-label">Hot Picks</h5>
+                                    <div class="right program-icon"></div>
+                                </div>
+                                <div class="item-image">
+                                    <img src="" alt="Royalty program">
+                                </div>
+                                <div class="item-description">
+                                    <p>Aliquam quis laoreet mi. Nam sed arcu sem. Sed elementum arcu velit, quis bibendum lacus pharetra ut. Duis vitae tristique quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas vestibulum lacinia neque porttitor blandit.</p>
+                                </div>
+                                <div class="item-engagement">
+                                    <ul class="user-list left">
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                        <li class="user-list-img"></li>
+                                    </ul>
+                                    <p class="saved-result right">+1,478 Saved</p>
+                                </div>
+                                <div class="item-menu">
+                                    <ul>
+                                        <li class="btn"><img class="btn-icon" src="" alt="saved-btn"><span class="btn-text">SAVE DEAL</span></li>
+                                        <li class="btn"><img class="btn-icon" src="" alt="share-btn"><span class="btn-text">SHARE</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer" class="clearfix">
+            <div class="left">
+                <p>Copyright © 2013 Logo</p>
+            </div>
+            <div class="right">
+                <ul class="menu-help">
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Use</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>-->
+    </body>
+</html>

@@ -1,0 +1,334 @@
+@charset "UTF-8";
+
+/* COMMON
+====================================== */
+html, body {
+    font: 10.5pt/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    color: #343339;
+    background-color: #EDE9EB;
+    width: 100%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 1em;
+    vertical-align: middle;
+    background-color: #169AA3;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+a {
+    color: #e74c3c;
+}
+
+/* HEADER
+====================================== */
+#nav-header {
+    position: relative;
+    overflow: hidden;
+    height: 68px;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    padding: 0 50px;
+}
+#site-logo {
+    float: left;
+    width: 180px;
+    height: 40px;
+    overflow: hidden;
+    margin: 14px 20px 0 0;
+}
+#site-logo > h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 40px;
+}
+#site-logo > h1 > a {
+    text-decoration: none;
+    color: #343339;
+    letter-spacing: 2px;
+}
+.menu {
+    list-style: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.menu > li {
+    float: left;
+    height: 68px;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu > li > a {
+    color: #757779;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 64px;
+    text-decoration: none;
+}
+.menu > li > a:hover {
+    color: #343339;
+}
+.menu-items {
+    border-right: 1px solid #CACACA;
+}
+.menu-items > a {
+    display: block;
+    padding: 0 25px;
+    vertical-align: middle;
+}
+.menu-items > a.active {
+    color:  #343339;
+    border-bottom: 4px solid #343339;
+}
+
+/* MAIN CONTENT
+====================================== */
+#body-container {
+    width: 100%;
+}
+#sidebar {
+    width: 250px;
+    padding: 10px 0;
+    background-color: #F3F4F5;
+    box-shadow: 0 0 1px rgba(0,0,0,0.35);
+    position: relative;
+    float: left;
+}
+
+/* search bar - aside
+----------------------------------------- */
+#search-box {
+    width: 210px;
+    margin: 0 auto 10px;
+}
+#search {
+    position: relative;
+    width: 162px;
+}
+#search > input {
+    border-radius: 3px;
+    border: 1px solid #AAA;
+    color: #757779;
+    margin: 0;
+    line-height: 24px;
+    outline: none;
+    padding: 3px 36px 3px 10px;
+    position: relative;
+    width: 100%;
+}
+.btn-search {
+    background-image: url('../img/glyphicons/png/glyphicons_027_search.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+.btn-search {
+    position: absolute;
+    right: -38px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    text-indent: -1000em;
+    overflow: hidden;
+    line-height: 13px;
+    border: none;
+    opacity: 0.45;
+    background-color: white;
+}
+.btn-search:hover {
+    opacity: 1;
+}
+
+/* filter organize - aside
+----------------------------------------- */
+#filter {
+    background-color: #E3E4E5;
+}
+#filter > h2 {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 32px;
+    margin: 0;
+    padding-left: 20px;
+    color: white;
+    white-space: nowrap;
+    background-color: #999;
+}
+.filter-header {
+    background-color: #169AA3;
+    font-weight: bold;
+    padding: 0 20px;
+    line-height: 32px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
+.criteria {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+
+/* program icons - aside
+----------------------------------------- */
+.icon-holder {
+    width: 26px;
+    height: 26px;
+    background-color: #AAA;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    margin-right: 10px;
+}
+.icon-holder img {
+    width: 26px;
+    height: 26px;
+}
+
+/* checkbox css - aside
+----------------------------------------- */
+.filter-option {
+    line-height: 48px;
+    border-bottom: 1px solid white;
+    position: relative;
+    padding: 0 20px;
+}
+#filter-wrapper input[type=checkbox] {
+    visibility: hidden;
+}
+.check-mark {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    right: 20px;
+    top: 16px;
+    border-radius: 3px;
+    background: #fcfff4;
+    border: 1px solid #999;
+    vertical-align: middle;
+}
+.check-mark:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    background: transparent;
+    top: 3px;
+    left: 3px;
+    border: 3px solid #333;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.check-mark:hover::after {
+    opacity: 0.5;
+}
+#filter-wrapper input[type=checkbox]:checked + .check-mark:after {
+    opacity: 1;
+}
+
+
+#content {
+    float: left;
+    position: relative;
+}
+/* menu - content
+----------------------------------------- */
+#menu-header {
+    background-color: rgba(0,0,0,0.07);
+    padding: 12px 50px;
+}
+#menu-header > .left > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu-header > .left > ul > li {
+    display: inline-block;
+}
+#menu-header > .left > ul > li > a {
+    display: block;
+    color: #666;
+    padding: 3px 36px;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: transparent;
+    font-weight: bold;
+}
+#menu-header > .left > ul > li > a:hover {
+    color: #333;
+    border-color: #CACACA;
+    background-color: #E3E4E5;
+}
+#menu-header > .left > ul > li.active > a {
+    color: #333;
+    border-color: #CACACA;
+    background-color: white;
+}
+#results {
+    display: block;
+    padding: 4px 0;
+}
+
+/* content - content
+----------------------------------------- */
+.notification {
+    width: 560px;
+    background: white;
+    padding: 15px;
+    margin: 10px auto 0;
+}
+.notification > h4 {
+    margin: 0;
+}
+.notification > p {
+    margin: 0;
+}
+/* itemWidth = 238; gap = 20; border = 1 */
+#deal-list {
+    width: 760px;
+    margin: 10px auto;
+    padding: 0;
+    list-style: none;
+}
+.item-wrapper {
+    position: absolute;
+    float: left;
+    width: 238px;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* FOOTER
+====================================== */
