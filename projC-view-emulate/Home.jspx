@@ -1,0 +1,541 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>E-Commerce Food Service | Home</title>
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+		<script type="text/javascript" src="static/js/main.js">;</script>
+	</head>
+	<body>
+	
+		<header id="top-bar" class="clearfix">
+			<div id="logo-container" class="left">
+				<h1><a href="Home">E-Food Commerce</a></h1>
+			</div>
+			<div id="signin-container" class="right">
+
+				<span class="profile-image"><img alt="user profile" src="static/image/food-icon.png" /></span>
+				<span class="profile-name">EM Prototype</span>
+				<form action="" method="post">
+					<button type="submit" class="btn" name="logout" value="logout">logout</button>
+				</form>
+
+			</div>
+		</header>
+		
+		
+		<div id="home-page" class="main-wrapper clearfix">
+			<aside id="nav-sidebar" class="block">
+				<header class="sidebar-header"><h3>Categories</h3></header>
+				<ul class="list">
+					<li>
+						<a href="Home/cat/1">
+							<div class="nav-item clearfix">
+								<span class="icon-holder">
+									<img alt="${cateItem.name}" src="static/image/google/Avert.jpg" />
+								</span>
+								<span class="nav-link">MEAT</span>
+							</div>
+						</a>
+					</li>
+					<!-- catelist -->
+					<li>
+						<a href="Home/cat/1">
+							<div class="nav-item clearfix">
+								<span class="icon-holder">
+									<img alt="${cateItem.name}" src="static/image/google/Avert.jpg" />
+								</span>
+								<span class="nav-link">ICE CREAM</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="Home/cat/1">
+							<div class="nav-item clearfix active">
+								<span class="icon-holder">
+									<img alt="${cateItem.name}" src="static/image/google/Avert.jpg" />
+								</span>
+								<span class="nav-link">CHEESE</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="Home/cat/1">
+							<div class="nav-item clearfix">
+								<span class="icon-holder">
+									<img alt="${cateItem.name}" src="static/image/google/Avert.jpg" />
+								</span>
+								<span class="nav-link">CEREAL</span>
+							</div>
+						</a>
+					</li>
+					<!-- /catelist -->
+				</ul>
+			</aside>
+			
+			<div id="content">
+				<ul class="list">
+				
+
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Boat.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+
+					
+					<!-- itemList -->
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Here_you_are_by_djajakarta.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Kinna_grannis.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Elda-Xueyinye.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Sara-Kiesling-Photography.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Leap.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Battle_angel.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Guitar_cassette.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Amazing-beautiful-Photography-of-Dance.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Balloon_heart.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/Kristen_Paparozzi.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/little_red_yin_by_apofiss.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="static/image/google/my_dear_lady_deer_by_Ludovic_Jacqz.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					<!-- /itemList -->
+				</ul>
+			</div>
+
+			<div id="shopping-cart" class="block">
+				<header class="sidebar-header"><h3>Shopping Cart</h3></header>
+				<!--
+				<table>
+					<thead>
+						<tr>
+							<th>DESCRIPTION</th>
+							<td>QTY</td>
+							<td class="price">PRICE</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="cartitem-5113132" data-quantity="1" data-price="3175.00">
+							<th class="info">
+								M9 ICE CREAM ITEM MADE IN CANADA
+								<em>2019H4009</em><em>$7.60</em>
+							</th>
+							<td class="qty">9</td>
+							<td class="price">$41.08</td>
+						</tr>
+					</tbody>
+				</table>
+				-->
+				<ol class="list">
+					
+					<li class="cart-item">
+						<div class="cart-item-wrapper clearfix">
+							<div class="cart-item-desc">
+								<h3>M9 ICE CREAM ITEM MADE IN CANADA</h3>
+								<span class="cart-item-number">2019H4009</span>
+								<span class="cart-item-price">$7.60</span>
+							</div>
+							<div class="cart-item-qty">5</div>
+							<div class="extended">$41.08</div>
+						</div>
+					</li>
+
+					<!-- cart-list -->
+					<li class="cart-item">
+						<div class="cart-item-wrapper clearfix">
+							<div class="cart-item-desc">
+								<h3>SUPERB RIB R1</h3>
+								<span class="cart-item-number">2019H4009</span>
+								<span class="cart-item-price">$3.15</span>
+							</div>
+							<div class="cart-item-qty">15</div>
+							<div class="extended">$81.08</div>
+						</div>
+					</li>
+					<li class="cart-item">
+						<div class="cart-item-wrapper clearfix">
+							<div class="cart-item-desc">
+								<h3>MADE IN CANADA, THE STEAK</h3>
+								<span class="cart-item-number">3019H4009</span>
+								<span class="cart-item-price">$12.60</span>
+							</div>
+							<div class="cart-item-qty">3</div>
+							<div class="extended">$141.04</div>
+						</div>
+					</li>
+					<li class="cart-item">
+						<div class="cart-item-wrapper clearfix">
+							<div class="cart-item-desc">
+								<h3>M9 ICE CREAM SANDWICH</h3>
+								<span class="cart-item-number">1006H4009</span>
+								<span class="cart-item-price">$75.60</span>
+							</div>
+							<div class="cart-item-qty">1</div>
+							<div class="extended">$75.60</div>
+						</div>
+					</li>
+					<li class="cart-item">
+						<div class="cart-item-wrapper clearfix">
+							<div class="cart-item-desc">
+								<h3>CHINA NOODLES</h3>
+								<span class="cart-item-number">0219H41A05</span>
+								<span class="cart-item-price">$1.13</span>
+							</div>
+							<div class="cart-item-qty">5</div>
+							<div class="extended">$5.65</div>
+						</div>
+					</li>
+					<!-- /cart-list -->
+					
+				</ol>
+				
+				
+				<!--
+				<c:if test="${empty order}">
+					<div class="inner"><em>cart is empty</em></div>
+				</c:if>
+				-->
+
+				<div class="sub-total clearfix">
+					<span class="left">Sub Total: </span>
+					<!--
+					<c:if test="${not empty order}">
+						<span class="right"><f:formatNumber type="currency">${order.total}</f:formatNumber></span>
+					</c:if>
+					-->
+					
+					<span class="right">$ 0.0</span>
+					
+					
+				</div>
+				<div class="checkout">
+					<a href="${contextPath}/Cart">GO TO CART</a>
+				</div>
+			</div>
+		</div>
+					
+					
+	</body>
+</html>

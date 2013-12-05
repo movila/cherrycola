@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>E-Commerce Food Service | B2B</title>
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+		<div id="b2b-page" class="main-wrapper">
+
+			<article id="form" class="block">
+				<header class="form-header">B2B Service</header>
+				<div class="form-content clearfix">
+					<form method="post" action="">
+						<div class="form-inline">
+			    			<button type="submit" class="btn" name="placeorder" value="Place B2B Order">Place B2B Order</button>
+			    			<button type="submit" class="btn red" name="generimage" value="Generate Item Image">Generate Item Image</button>
+			    		</div>
+		    		</form>
+					<table>	
+						<thead>
+							<tr>
+								<th>Product ID</th>
+								<th>Name</th>
+								<th>Quantity</th>
+								<th>Best Price</th>
+								<th>Whole Saler</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="s" items="${order.items}">	
+							<tr>
+								<td>${s.number}</td>
+								<td>${s.name}</td>
+								<td>
+									${s.qty}
+								</td>
+								<td>
+									<f:formatNumber type="currency">${s.price}</f:formatNumber>
+								</td>
+								<td>
+									${s.wholeSaler}
+								</td>				      					
+							</tr>
+							</c:forEach>
+							<!-- cartlitems -->
+							<!-- /cartitems -->
+						</tbody>				  				      			
+				    </table>
+				</div>
+			</article>
+
+		</div>
+	</body>
+</html>

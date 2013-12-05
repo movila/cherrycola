@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>E-Commerce Food Service | Checkout</title>
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+		<div id="checkout-page" class="main-wrapper">
+
+			<article id="form" class="block">
+				<header class="form-header">Checkout</header>
+				<div class="form-content clearfix">
+					<table>	
+						<thead>
+							<tr>
+								<th>Product ID</th>
+								<th>Name</th>
+								<th>Unit Price</th>
+								<th>Quantity</th>
+								<th>Extended</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="s" items="${order.items}">	
+							<tr>
+								<td>${s.number}</td>
+								<td>${s.name}</td>
+								<td>
+									<f:formatNumber type="currency">${s.price}</f:formatNumber>
+								</td>
+								<td>
+									${s.quantity}
+								</td>
+								<td>
+									<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+								</td>				      					
+							</tr>
+							</c:forEach>
+							<!-- cartlitems -->
+							<tr>
+								<td>${s.number}</td>
+								<td>${s.name}</td>
+								<td>
+									<f:formatNumber type="currency">${s.price}</f:formatNumber>
+								</td>
+								<td>
+									${s.quantity}
+								</td>
+								<td>
+									<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+								</td>				      					
+							</tr>
+							<tr>
+								<td>${s.number}</td>
+								<td>${s.name}</td>
+								<td>
+									<f:formatNumber type="currency">${s.price}</f:formatNumber>
+								</td>
+								<td>
+									${s.quantity}
+								</td>
+								<td>
+									<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+								</td>				      					
+							</tr>
+							<tr>
+								<td>${s.number}</td>
+								<td>${s.name}</td>
+								<td>
+									<f:formatNumber type="currency">${s.price}</f:formatNumber>
+								</td>
+								<td>
+									${s.quantity}
+								</td>
+								<td>
+									<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+								</td>				      					
+							</tr>
+							<!-- /cartitems -->
+						</tbody>				  				      			
+				    </table>
+		    		<div class="form-inline">
+		    			<p><strong>The above order had been placed, thank you. </strong>
+		    				To view your submission, click below<p>
+		    			<a class="btn" href="Checkout">View Submission</a>
+		    		</div>
+				</div>
+			</article>
+
+		</div>
+	</body>
+</html>

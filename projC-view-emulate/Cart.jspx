@@ -1,0 +1,172 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>E-Commerce Food Service | Shopping Cart</title>
+		<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+		<div id="cart-page" class="main-wrapper">
+
+			<article id="form" class="block">
+				<header class="form-header">Shopping Cart</header>
+				<div class="form-content clearfix">
+					<form action="Cart" method="post" class="left">
+						<table>	
+							<thead>
+								<tr>
+									<th>Product ID</th>
+									<th>Name</th>
+									<th>Unit Price</th>
+									<th>Quantity</th>
+									<th>Extended</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<c:forEach var="s" items="${order.items}">	
+								<tr>
+									<td>${s.number}</td>
+									<td>${s.name}</td>
+									<td>
+										<f:formatNumber type="currency">${s.price}</f:formatNumber>
+									</td>
+									<td>
+										<input type="text" name="qty${s.number}" class="quantity" value="${s.quantity}" />
+									</td>
+									<td>
+										<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" name="delete" value="${s.number}"> Delete
+											</label>
+										</div>
+									</td>					      					
+								</tr>
+								</c:forEach>
+								<!-- cartlitems -->
+								<tr>
+									<td>${s.number}</td>
+									<td>${s.name}</td>
+									<td>
+										<f:formatNumber type="currency">${s.price}</f:formatNumber>
+									</td>
+									<td>
+										<input type="text" name="qty${s.number}" class="quantity" value="${s.quantity}" />
+									</td>
+									<td>
+										<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" name="delete" value="${s.number}"> Delete
+											</label>
+										</div>
+									</td>					      					
+								</tr>
+								<tr>
+									<td>${s.number}</td>
+									<td>${s.name}</td>
+									<td>
+										<f:formatNumber type="currency">${s.price}</f:formatNumber>
+									</td>
+									<td>
+										<input type="text" name="qty${s.number}" class="quantity" value="${s.quantity}" />
+									</td>
+									<td>
+										<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" name="delete" value="${s.number}"> Delete
+											</label>
+										</div>
+									</td>					      					
+								</tr>
+								<tr>
+									<td>${s.number}</td>
+									<td>${s.name}</td>
+									<td>
+										<f:formatNumber type="currency">${s.price}</f:formatNumber>
+									</td>
+									<td>
+										<input type="text" name="qty${s.number}" class="quantity" value="${s.quantity}" />
+									</td>
+									<td>
+										<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" name="delete" value="${s.number}"> Delete
+											</label>
+										</div>
+									</td>					      					
+								</tr>
+								<tr>
+									<td>${s.number}</td>
+									<td>${s.name}</td>
+									<td>
+										<f:formatNumber type="currency">${s.price}</f:formatNumber>
+									</td>
+									<td>
+										<input type="text" name="qty${s.number}" class="quantity" value="${s.quantity}" />
+									</td>
+									<td>
+										<f:formatNumber type="currency">${s.extended}</f:formatNumber>
+									</td>
+									<td>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" name="delete" value="${s.number}"> Delete
+											</label>
+										</div>
+									</td>					      					
+								</tr>
+								<!-- /cartitems -->
+							</tbody>				  				      			
+					    </table>
+			    		<div class="form-inline-stretch">
+			    			<button type="submit" class="btn" name="update" value="update">Update</button>
+			    		</div>
+			    	</form>
+			    	<div id="receipt" class="right">
+			    		<ol class="list">
+			    			<li class="clearfix">
+			    				<span class="left">Sub Total:</span>
+			    				<span class="right">${order.total}</span>
+			    			</li>
+			    			<li class="clearfix">
+			    				<span class="left">HST:</span>
+			    				<span class="right">${order.HST}</span>
+			    			</li>
+			    			<li class="clearfix">
+			    				<span class="left">Shipping Cost:</span>
+			    				<span class="right">${order.shipping}</span>
+			    			</li>
+			    			<li class="clearfix">
+			    				<span class="left">Total:</span>
+			    				<span class="right">${order.grandTotal}</span>
+			    			</li>
+			    		</ol>
+			    		<div class="form-inline-stretch">
+			    			<a class="btn" href="Checkout">Continue Checkout</a>
+			    		</div>
+			    		<div class="form-inline-stretch">
+			    			<a class="btn" href="Home">Back To Shopping</a>
+			    		</div>
+			    	</div>
+				    
+				</div>
+			</article>
+
+		</div>
+	</body>
+</html>
