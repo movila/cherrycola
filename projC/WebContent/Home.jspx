@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+		  xmlns:c="http://java.sun.com/jsp/jstl/core"
+		  xmlns:f="http://java.sun.com/jsp/jstl/fmt"
+		  version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
+<html>
+	<head>
+		<![CDATA[<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">]]>
+		<title>E-Commerce Food Service | Home</title>
+		<![CDATA[<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">]]>
+        <link rel="stylesheet" type="text/css" href="${contextPath}/static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="${contextPath}/static/css/style.css" />
+	</head>
+	<body>
+	
+		<header id="top-bar" class="clearfix">
+			<div id="logo-container" class="left">
+				<h1><a href="${contextPath}/Home">E-Food Commerce</a></h1>
+			</div>
+			<div id="signin-container" class="right">
+				
+				<c:if test="${empty client}">
+					<a href="${contextPath}/Login" alt="login"><span class="btn">Login</span></a>
+				</c:if>
+			
+				<c:if test="${not empty client}">
+					<span class="profile-image"><img alt="user profile" src="${contextPath}/static/image/food-icon.png" /></span>
+					<span class="profile-name">${client.name}</span>
+					<form action="" method="post">
+						<button type="submit" class="btn" name="logout" value="logout">logout</button>
+					</form>
+				</c:if>
+				
+			</div>
+		</header>
+		
+		
+		<div id="home-page" class="main-wrapper clearfix">
+			<aside id="nav-sidebar" class="block">
+				<header class="sidebar-header"><h3>Categories</h3></header>
+				<ul class="list">
+					<c:forEach var="cateItem" items="${cateList}">
+						<li class="cate-item">
+							<a href="${contextPath}/Home/cat/${cateItem.id}">
+								<div class="nav-item clearfix">
+									<span class="icon-holder">
+										<img alt="${cateItem.name}" src="${contextPath}/static/image/${cateItem.name}.png" />
+									</span>
+									<span class="nav-link">${cateItem.name}</span>
+								</div>
+							</a>
+						</li>
+					</c:forEach>
+				</ul>
+			</aside>
+			
+			<div id="content">
+				<c:if test="${not empty itemList}">
+				<ul class="list">
+				
+					<c:forEach var="item" items="${itemList}">
+					<li class="stock-item block">
+						<div class="item-image">
+							<img src="${contextPath}/static/image/google/${item.number}.jpg" />
+						</div>
+						<div class="item-title">
+							<h4>${item.name}</h4>
+						</div>
+						<div class="item-desc">
+							<ul class="list">
+								<li>Item #: ${item.number}</li>
+								<li>Price: 
+									<f:formatNumber type="currency">${item.price}</f:formatNumber>
+								</li>
+							</ul>
+						</div>
+						<div class="item-add">
+							<form class="add-cart-form" action="" method="post">
+								<label for="qty${item.number}">QTY</label> 
+								<input class="qty-box" type="text" name="qty" id="qty${item.number}" value="1"/>
+								<button type="submit" class="btn" name="addToCart" value="add">Add</button>
+								<input type="hidden" name="name" value="${item.name}" />
+								<input type="hidden" name="number" value="${item.number}" />
+								<input type="hidden" name="price" value="${item.price}" />
+							</form>
+						</div>
+					</li>
+					</c:forEach>
+					
+				</ul>
+				</c:if>
+				
+				<c:if test="${empty itemList}">
+					<div style="text-align:center; height:400px;"><h3 style="margin-top:50px;">No results found.</h3></div>
+				</c:if>
+				
+			</div>
+
+			<div id="search-panel" class="block">
+				<header class="sidebar-header"><h3>Searching</h3></header>					
+				<div class="inner">	
+					<form action="${contextPath}/Home/q" method="get">				
+						<div class="form-inline">
+							<input type="text" name="item" class="search" value="" />
+							<button type="submit" class="btn" >Search</button>						
+						</div>
+					</form>
+				</div>					
+			</div>
+			
+			<div id="shopping-cart" class="block">
+				<header class="sidebar-header"><h3>Shopping Cart</h3></header>
+				
+				<c:if test="${not empty order}">
+				<ol class="list">
+					<c:forEach var="cartItem" items="${order.items}">
+					<li class="cart-item">
+						<div class="cart-item-wrapper clearfix">
+							<div class="cart-item-desc">
+								<h3>${cartItem.name}</h3>
+								<span class="cart-item-number">${cartItem.number}</span>
+								<span class="cart-item-price"><f:formatNumber type="currency">${cartItem.price}</f:formatNumber></span>
+							</div>
+							<div class="cart-item-qty">${cartItem.quantity}</div>
+							<div class="extended"><f:formatNumber type="currency">${cartItem.extended}</f:formatNumber></div>
+						</div>
+					</li>
+					</c:forEach>
+				</ol>
+				</c:if>
+				
+				<c:if test="${empty order.items}">
+					<div class="inner"><em>cart is empty</em></div>
+				</c:if>
+				
+				<div class="sub-total clearfix">
+					<span class="left">Sub Total: </span>
+					
+					<c:if test="${not empty order}">
+						<span class="right"><f:formatNumber type="currency">${order.total}</f:formatNumber></span>
+					</c:if>
+					<c:if test="${empty order}">
+						<span class="right">$ 0.0</span>
+					</c:if>
+					
+				</div>
+				<div class="checkout">
+					<a href="${contextPath}/Cart">View Detailed Cart</a>
+				</div>
+			</div>
+			
+		</div>
+					
+		<script type="text/javascript" src="${contextPath}/static/js/main.js">;</script>	
+	</body>
+</html>
+</jsp:root>

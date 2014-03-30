@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+		  xmlns:c="http://java.sun.com/jsp/jstl/core"
+		  version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
+<html>
+	<head>
+		<![CDATA[<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">]]>
+		<title>E-Commerce Food Service | Log In</title>
+		<![CDATA[<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">]]>
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+		<header id="top-bar" class="clearfix">
+			<div id="logo-container" class="left">
+				<h1><a href="Home">E-Food Commerce</a></h1>
+			</div>
+		</header>
+	
+		<div id="login-page" class="main-wrapper page-wrapper">
+			<c:if test="${not empty loginError}">
+				<div class="error">${loginError}</div>
+			</c:if>
+			<article id="form" class="block">
+				<header class="form-header">Client log in</header>
+				<div class="form-content">
+					<form action="" method="post">
+						<div class="form-line clearfix">
+							<div class="form-group">
+								<label for="clientName">Client Name</label>
+								<input type="text" name="clientName" id="clientName"/>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="text" name="password" id="password"/>
+							</div>
+						</div>
+						<div class="form-line clearfix">
+							<button type="submit" class="btn" name="login" value="login">Log In</button>
+						</div>
+					</form>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>
+</jsp:root>

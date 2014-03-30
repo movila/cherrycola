@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+		  xmlns:c="http://java.sun.com/jsp/jstl/core"
+		  xmlns:f="http://java.sun.com/jsp/jstl/fmt"
+		  version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-system="about:legacy-compat"
+		omit-xml-declaration="true" />
+<html>
+	<head>
+		<![CDATA[<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">]]>
+		<title>E-Commerce Food Service | Manager Admin Panel</title>
+		<![CDATA[<meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">]]>
+        <link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
+		<link rel="StyleSheet" type="text/css" href="static/css/style.css" />
+	</head>
+	<body>
+		<header id="top-bar" class="clearfix">
+			<div id="logo-container" class="left">
+				<h1><a href="Home">E-Food Commerce</a></h1>
+			</div>
+			<div id="signin-container" class="right">
+				
+				<c:if test="${empty client}">
+					<a href="Login" alt="login"><span class="btn">Login</span></a>
+				</c:if>
+			
+				<c:if test="${not empty client}">
+					<span class="profile-image"><img alt="user profile" src="static/image/food-icon.png" /></span>
+					<span class="profile-name">${client.name}</span>
+					<form action="Home" method="post">
+						<button type="submit" class="btn" name="logout" value="logout">logout</button>
+					</form>
+				</c:if>
+				
+			</div>
+		</header>
+	
+		<div id="b2b-page" class="main-wrapper page-wrapper">
+	
+				<article id="form" class="block">
+					<header class="form-header">Management Services</header>
+					<div class="form-content clearfix">
+					
+						
+						<form method="post" action="">
+							<div class="form-inline">
+								<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+				    			<select name="range">
+									<option value="ALL" selected="selected">All</option>
+					            	<option value="NIGHTLY">Nightly</option>
+					                <option value="WEEKLY">Weekly</option>      					      
+					            </select>
+				    			<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+				    			<button type="submit" class="btn" name="placeorder" value="Place B2B Order">Place B2B Order</button>
+				    			<button type="submit" class="btn red" name="generimage" value="Generate Item Image">Generate Item Image</button>
+				    		</div>
+			    		</form>
+			    		
+			    		<c:if test="${not empty b2b}">
+						<table>	
+							<thead>
+								<tr>
+									<th>Product ID</th>
+									<th>Name</th>
+									<th>Quantity</th>
+									<th>Best Price</th>
+									<th>Whole Saler</th>
+								</tr>
+							</thead>
+							<tbody>
+								<c:forEach var="s" items="${b2b}">	
+								<tr>
+									<td>${s.number}</td>
+									<td>${s.name}</td>
+									<td>
+										${s.qty}
+									</td>
+									<td>
+										<f:formatNumber type="currency">${s.price}</f:formatNumber>
+									</td>
+									<td>
+										${s.wholeSaler}
+									</td>				      					
+								</tr>
+								</c:forEach>
+							</tbody>				  				      			
+					    </table>
+					    </c:if>
+					    
+					</div>
+				</article>
+	
+			</div>
+			
+			<script type="text/javascript" src="${contextPath}/static/js/main.js">;</script>	
+	</body>
+</html>
+</jsp:root>
